@@ -5,6 +5,13 @@ description: Source b-roll for a video edit — classify each moment, scope the 
 
 # B-Roll Finder — skill methodology
 
+> **Norge Ufiltrert / Grok Bot setup (added by norgeufiltrert):**
+> - Language: most of our videos are Norwegian. Run Whisper with `--model small` (or `medium` for noisy audio) and **no `--language` flag** so it auto-detects; use `--language no` when you know the clip is Norwegian. The `.en` models only understand English.
+> - Computer: `-hwaccel videotoolbox` and `h264_videotoolbox` only work on a Mac. On Linux (e.g. Grok Bot's cloud computer) drop `-hwaccel videotoolbox` and encode with `-c:v libx264`.
+> - Install once: `ffmpeg`, `pip install -U openai-whisper` (on a Mac: `brew install ffmpeg`).
+> - Credit every source visibly, as Norge Ufiltrert's crediting rules require. Prefer real news headlines/screenshots as receipts for news and commentary clips.
+
+
 > A reusable methodology for sourcing and placing b-roll on talking-head video.
 > Genericized from a working agent skill. Adapt paths and brand tokens to your own setup.
 
